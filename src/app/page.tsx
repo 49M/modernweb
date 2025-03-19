@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Image from "next/image"
 
 const socialNetImgs = [
     "https://x58p5pjq8q.ufs.sh/f/2QIaHtMj8D7ksG7PtjWX6qYdoxB7uRjDlfaGE5WVheCF0Ht3",
@@ -13,12 +13,12 @@ const mockImages = socialNetImgs.map((url, index) => ({
 
 export default function HomePage() {
   return (
-    <main className="">
-      <div className="flex flex-wrap gap-4">
+    <main>
+      <div className="min-h-screen flex flex-wrap gap-10 justify-center items-center">
           {
               mockImages.map((image) => (
-                  <div key={image.id} className="w-48">
-                      <img src={image.url} alt="image" />
+                  <div key={image.id} className="w-20">
+                      <Image src={image.url} alt="image" />
                   </div>
               ))
           }
