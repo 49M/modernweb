@@ -17,8 +17,8 @@ export default function HomePage() {
       <div className="min-h-screen flex flex-wrap gap-10 justify-center items-center">
           {
               mockImages.map((image) => (
-                  <div key={image.id} className="w-20">
-                      <Image src={image.url} alt="image" />
+                  <div key={image.id}>
+                      <Image src={image.url} alt="image" width={100} height={100} />
                   </div>
               ))
           }
