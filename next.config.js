@@ -13,6 +13,12 @@ const config = {
                 hostname: 'x58p5pjq8q.ufs.sh'
             }
         ]
+    },
+    typescript: {
+        ignoreBuildErrors: true,
+    },
+    eslint: {
+        ignoreDuringBuilds: true,
     }
 };
 

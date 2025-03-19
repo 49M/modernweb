@@ -11,9 +11,12 @@ export const metadata: Metadata = {
 
 function TopNav() {
     return (
-        <nav className={"flex h-full justify-between items-center p-4"}>
+        <nav className={"flex h-full justify-between items-center p-4 px-8 p border-b"}>
             <div>
                 <Link href={"https://ethereum.org/en/"} target={"_blank"} rel={"noopener norefferer"}>Ethereum Site</Link>
+            </div>
+            <div>
+                Sign in
             </div>
         </nav>
     );
