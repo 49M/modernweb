@@ -1,4 +1,5 @@
 import Image from "next/image"
+import {db} from "~/server/db";
 
 const socialNetImgs = [
     "https://x58p5pjq8q.ufs.sh/f/2QIaHtMj8D7ksG7PtjWX6qYdoxB7uRjDlfaGE5WVheCF0Ht3",
@@ -11,8 +12,11 @@ const mockImages = socialNetImgs.map((url, index) => ({
     url
 }));
 
-export default function HomePage() {
-  return (
+export default async function HomePage() {
+    const posts = await db.query.posts.findMany();
+    console.log(posts);
+
+    return (
     <main>
       <div className="min-h-screen flex flex-wrap gap-10 justify-center items-center">
           {
